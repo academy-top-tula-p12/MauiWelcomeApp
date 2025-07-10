@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiContainersApp.Pages.StackLayoutPage"
+             Title="StackLayout Page">
+    <StackLayout x:Name="stackLayout"
+                 Orientation="Horizontal"
+                 Spacing="50">
+        <Label 
+            Text="Item 1"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="26"
+            TextColor="Red"/>
+        <Label 
+            Text="Item 2"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="26"/>
+        <Label 
+            Text="Item 3"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="26"/>
+        
+        <VerticalStackLayout>
+        </VerticalStackLayout>
+        <HorizontalStackLayout>
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>

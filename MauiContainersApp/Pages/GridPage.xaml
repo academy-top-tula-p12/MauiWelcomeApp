@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiContainersApp.Pages.GridPage"
+             Title="GridPage">
+    <!--<Grid ColumnSpacing="10"
+          RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="BlueViolet"
+                 Grid.Row="1"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+            />
+        <BoxView Color="HotPink"
+                 Grid.Row="0"
+                 Grid.Column="1"
+            />
+        <BoxView Color="Yellow"
+                 Grid.Row="0"
+                 Grid.Column="2"
+                 Grid.RowSpan="2"
+            />
+
+
+    </Grid>-->
+</ContentPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiContainersApp.Pages.AbsoluteLayoutPage"
+             Title="AbsoluteLayoutPage">
+    <AbsoluteLayout x:Name="absoluteLayout">
+        <BoxView Color="Magenta"
+                 AbsoluteLayout.LayoutBounds="50, 100, 200, 120"/>
+        <Label Text="Hello world"
+               FontSize="30"
+               AbsoluteLayout.LayoutBounds="60, 110"/>
+
+        <BoxView Color="Green" 
+                 AbsoluteLayout.LayoutFlags="All"
+                 AbsoluteLayout.LayoutBounds="0.2, 0.2, 0.5, 0.5"/>
+
+    </AbsoluteLayout>
+</ContentPage>
