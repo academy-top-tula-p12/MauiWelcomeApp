@@ -5,12 +5,18 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Spacing="10"
+            Padding="30,0">
             <Button x:Name="buttonBaseControls"
                     Text="Base Controls"
-                    FontSize="30"
-                    HorizontalOptions="Center"
+                />
+
+            <Button x:Name="buttonUserPage"
+                    Text="User Form"
+                />
+            
+            <Button x:Name="buttonBoxPage"
+                    Text="Box Scroll Views"
                 />
         </VerticalStackLayout>
     </ScrollView>

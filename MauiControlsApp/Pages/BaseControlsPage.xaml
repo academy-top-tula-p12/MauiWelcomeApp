@@ -3,9 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiControlsApp.Pages.BaseControlsPage"
              Title="Base Controls Page">
-    <VerticalStackLayout>
+    <VerticalStackLayout x:Name="stack">
+        <Label 
+            FontSize="30"
+            FontAttributes="Italic, Bold"
+            HorizontalOptions="Fill"
+            
+            TextDecorations="Underline"
+            TextTransform="Uppercase"
+            LineBreakMode="WordWrap"
+            
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Start">
+
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="First" TextColor="Red" />
+                    <Span Text= " "/>
+                    <Span Text="label" TextColor="BlueViolet" />
+                </FormattedString>
+            </Label.FormattedText>
+            
+        </Label>
         <Button x:Name="buttonBackToMain"
+                
                 Text="Back to Main"
-                FontSize="20"/>
+                
+                WidthRequest="350"
+                HeightRequest="120"
+                Margin="20"
+                Padding="20, 30"
+
+                FontSize="30"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start"
+
+                BackgroundColor="Aquamarine"
+                TextColor="DarkRed"
+                BorderWidth="10"
+                BorderColor="#55774455"
+
+                FontFamily="OpenSansSemibold"
+                ImageSource="dotnet_bot.png"
+                />
     </VerticalStackLayout>
 </ContentPage>

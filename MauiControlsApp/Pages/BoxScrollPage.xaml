@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControlsApp.Pages.BoxScrollPage"
+             Title="BoxScrollPage">
+    <!--<VerticalStackLayout>
+        <BoxView
+            Color="Bisque"
+            CornerRadius="20"
+            WidthRequest="300"
+            HeightRequest="200"
+            
+            />
+        <Label Text="Hello world!"
+               FontSize="40"
+               TextColor="DarkGoldenrod"
+               HorizontalOptions="Center"/>
+
+        <BoxView Color="DarkGray" 
+                 HeightRequest="4"
+                 HorizontalOptions="Fill"
+                 Margin="5"/>
+        <BoxView Color="DarkGray" 
+                 HeightRequest="6"
+                 HorizontalOptions="Fill"
+                 Margin="5"/>
+
+
+        <Label Text="Hello people!"
+               FontSize="30"
+               TextColor="DarkMagenta"
+               HorizontalOptions="Center"/>
+    </VerticalStackLayout>-->
+
+    <VerticalStackLayout>
+        <Label x:Name="labelScrollX"
+               Text="X:"
+               FontSize="30"/>
+        <Label x:Name="labelScrollY"
+               Text="Y:"
+               FontSize="30"/>
+        <ScrollView x:Name="scrollView"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    HeightRequest="300"
+                    Orientation="Both"
+                    HorizontalScrollBarVisibility="Always"
+                    
+                    Scrolled="scrollView_Scrolled">
+            <VerticalStackLayout>
+                <BoxView WidthRequest="500"
+                         HeightRequest="200"
+                         Color="DarkOliveGreen"/>
+                <BoxView WidthRequest="500"
+                         HeightRequest="200"
+                         Color="YellowGreen"/>
+                <BoxView WidthRequest="500"
+                         HeightRequest="200"
+                         Color="HotPink"/>
+                <BoxView WidthRequest="500"
+                         HeightRequest="200"
+                         Color="CornflowerBlue"/>
+                <BoxView WidthRequest="500"
+                         HeightRequest="200"
+                         Color="OrangeRed"/>
+
+            </VerticalStackLayout>
+        </ScrollView>    
+    </VerticalStackLayout>
+    
+                
+    
+</ContentPage>
