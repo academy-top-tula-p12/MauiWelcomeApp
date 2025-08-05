@@ -18,6 +18,14 @@
             <Button x:Name="buttonBoxPage"
                     Text="Box Scroll Views"
                 />
+
+            <Button x:Name="buttonBordersPage"
+                    Text="Borders"
+                />
+
+            <Button x:Name="buttonPickersPage"
+                    Text="Pickers"
+                />
         </VerticalStackLayout>
     </ScrollView>
 

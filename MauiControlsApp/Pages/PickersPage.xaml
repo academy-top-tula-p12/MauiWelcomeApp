@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControlsApp.Pages.PickersPage"
+             Title="PickersPage">
+    <VerticalStackLayout>
+        <Label x:Name="labelDatePicker" 
+               Text="Select Date: " 
+               FontSize="30" />
+        <DatePicker Format="dd MM yyyy"
+                    MinimumDate="7/1/2025"
+                    
+                    DateSelected="DatePicker_DateSelected"
+                    >
+            <DatePicker.MaximumDate>9/1/2025</DatePicker.MaximumDate>
+        </DatePicker>
+        <Label x:Name="labelTimePicker" 
+               Text="Select Time: " 
+               FontSize="30" />
+        
+    </VerticalStackLayout>
+</ContentPage>

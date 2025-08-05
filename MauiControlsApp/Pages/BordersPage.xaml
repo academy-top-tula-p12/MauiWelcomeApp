@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControlsApp.Pages.BordersPage"
+             Title="BordersPage">
+    
+   <VerticalStackLayout x:Name="stackLayoutBorders">
+        
+        <Border StrokeThickness="5"
+                Stroke="Red"
+                BackgroundColor="DarkRed"
+                Padding="20"
+                Margin="20">
+            
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            
+            <VerticalStackLayout>
+                <Label x:Name="labelName" 
+                       Text=""
+                       FontSize="30"
+                       TextColor="White"
+                       />
+                <Entry x:Name="entryName" 
+                       TextChanged="entryName_TextChanged"
+                       FontSize="30"
+                       TextColor="White"
+                       />
+            </VerticalStackLayout>
+        </Border>
+
+        <Border StrokeThickness="10"
+                Stroke="DarkGray"
+                HeightRequest="200"
+                WidthRequest="200">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="100, 20, 20, 100" />
+            </Border.StrokeShape>
+            <Image x:Name="imageLandscape"
+                   Aspect="AspectFill"
+                   HeightRequest="180"
+                   WidthRequest="180"
+                   />
+        </Border>
+
+        <Border Stroke="DarkGray"
+                StrokeThickness="10"
+                BackgroundColor="Gray"
+                Margin="20"
+                Padding="20, 10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            
+            <VerticalStackLayout>
+                <Label Text="Product"
+                       FontSize="50"
+                       TextColor="White"/>
+                <BoxView HeightRequest="5"
+                         Color="DarkGray"/>
+                <Label Text="Lorem Ipsum" 
+                       FontSize="30"
+                       TextColor="Black"
+                       />
+            </VerticalStackLayout>
+        </Border>
+       
+    </VerticalStackLayout>
+</ContentPage>

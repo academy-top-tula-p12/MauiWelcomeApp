@@ -34,6 +34,16 @@ namespace MauiControlsApp
                 await Navigation.PushAsync(new BoxScrollPage());
             };
 
+            buttonBordersPage.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new BordersPage());
+            };
+
+            buttonPickersPage.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new PickersPage());
+            };
+
         }
 
         
