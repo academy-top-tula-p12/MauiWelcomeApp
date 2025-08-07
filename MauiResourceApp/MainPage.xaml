@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiResourceApp.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="textRed">#FF0000</Color>
+            <Color x:Key="textGreen">#00FF00</Color>
+            <x:Double x:Key="padding20">20</x:Double>
+        </ResourceDictionary>
+        
+        <Style TargetType="ActivityIndicator">
+            <Setter Property="Color" Value="{StaticResource Key=textRed}" />
+        </Style>
+
+        <Style TargetType="ActivityIndicator" x:Key="greenTheme">
+            <Setter Property="Color" Value="{StaticResource Key=textGreen}" />
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource greenTheme}">
+            
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="stack"
+            Padding="{StaticResource Key=padding20}"
+            Spacing="25">
+            <Label Text="Hello world"
+                   TextColor="{DynamicResource Key=textRed}" />
+            <Label Text="Hello people"
+                   TextColor="{StaticResource Key=textRed}" />
+            <Button Text="Change Resource"
+                    Clicked="Button_Clicked">
+            </Button>
+            <ActivityIndicator IsRunning="True" Style="{StaticResource greenTheme}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

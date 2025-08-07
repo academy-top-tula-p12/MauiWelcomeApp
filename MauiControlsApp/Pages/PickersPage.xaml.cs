@@ -1,4 +1,5 @@
 using System.Globalization;
+using Microsoft.Maui.Controls;
 
 namespace MauiControlsApp.Pages;
 
@@ -23,5 +24,11 @@ public partial class PickersPage : ContentPage
         labelDatePicker.Text = "Select Date: " + e.NewDate.ToString("dd.MM.yyyy");
     }
 
-    
+    private void TimePicker_TimeSelected(object? sender, TimeChangedEventArgs e)
+    {
+
+    }
+
+
+
 }

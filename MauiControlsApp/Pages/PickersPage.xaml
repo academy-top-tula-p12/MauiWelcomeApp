@@ -17,6 +17,7 @@
         <Label x:Name="labelTimePicker" 
                Text="Select Time: " 
                FontSize="30" />
-        
+        <TimePicker  />
+
     </VerticalStackLayout>
 </ContentPage>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiPickersApp.MainPage"
+             WidthRequest="600"
+             HeightRequest="800">
+
+    <ScrollView HeightRequest="500" VerticalOptions="StartAndExpand">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="20">
+            <Label x:Name="labelTimePicker"
+                   Text="Time select: " />
+            <TimePicker x:Name="timePicker"
+                        Time="15:00"
+                        TimeSelected="TimePicker_TimeSelected"
+                        PropertyChanged="TimePicker_PropertyChanged"/>
+            <Stepper x:Name="stepperDept"
+                     Minimum="-1"
+                     Maximum="2"
+                     Value="0"
+                     Increment="0.1"
+                     ValueChanged="stepperDept_ValueChanged"/>
+            
+            <Label x:Name="labelStepper"
+                   Text="Value: 0" />
+
+            <Slider x:Name="slider"
+                    Minimum="-50"
+                    Maximum="100"
+                    Value="0"
+                    ThumbColor="Red"
+                    MinimumTrackColor="DeepPink"
+                    MaximumTrackColor="LightPink"
+                    ValueChanged="slider_ValueChanged"
+                    />
+            <Label x:Name="labelSlider"
+                   Text="Value: 0"
+                   />
+
+            <CheckBox x:Name="checkBox"
+                      IsChecked="True"
+                      Color="GreenYellow"
+                      CheckedChanged="checkBox_CheckedChanged"/>
+            <Switch x:Name="switch"
+                    IsToggled="False"
+                    OnColor="YellowGreen"
+                    ThumbColor="Magenta"
+                    Toggled="switch_Toggled"
+                    />
+
+            <Border Padding="10" StrokeThickness="2" Stroke="DarkGray">
+                <VerticalStackLayout>
+                    <Label x:Name="labelLanguage"
+                           Text="Language: "/>
+
+                    <RadioButton GroupName="Langs" 
+                             Content="Russian"
+                             CheckedChanged="RadioButton_CheckedChanged"
+                             />
+                    <RadioButton GroupName="Langs" 
+                             Content="English"
+                             CheckedChanged="RadioButton_CheckedChanged"
+                             />
+                    <RadioButton GroupName="Langs" 
+                             Content="Deutch"
+                             IsChecked="True"
+                             CheckedChanged="RadioButton_CheckedChanged"
+                             />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Padding="10" StrokeThickness="2" Stroke="DarkGray">
+                <VerticalStackLayout RadioButtonGroup.GroupName="radioFlights">
+                    <Label x:Name="labelFlight"
+                           Text="Flight: Aeroflot"/>
+                    <RadioButton IsChecked="True">
+                        <RadioButton.Content>
+                            <VerticalStackLayout>
+                                <Label Text="Aeroflot" />
+                                <Image Source="aeroflot.png"
+                                       HeightRequest="80"/>
+                            </VerticalStackLayout>
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton>
+                        <RadioButton.Content>
+                            <VerticalStackLayout>
+                                <Label Text="Nord Star" />
+                                <Image Source="nordstar.png"
+                                       HeightRequest="80"/>
+                            </VerticalStackLayout>
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton>
+                        <RadioButton.Content>
+                            <VerticalStackLayout>
+                                <Label Text="S7" />
+                                <Image Source="s7.png"
+                                       HeightRequest="80"/>
+                            </VerticalStackLayout>
+                        </RadioButton.Content>
+                    </RadioButton>
+                </VerticalStackLayout>
+            </Border>
+
+            <ProgressBar x:Name="progress"
+                         ProgressColor="Green"
+                         Progress="0"
+                         />
+            <Button x:Name="buttonProgressStart"
+                    Text="Start"
+                    Clicked="buttonProgressStart_Clicked"
+                    />
+
+            <ActivityIndicator x:Name="activityIndicator"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
+    

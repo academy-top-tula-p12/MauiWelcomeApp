@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControlsThreeApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label x:Name="labelPickerCity"
+                   Text="Selected City: "/>
+
+            <Picker x:Name="pickerList"
+                    Title="City"
+                    SelectedIndexChanged="pickerList_SelectedIndexChanged"
+                />
+
+
+            <TableView>
+                <TableView.Root>
+                    <TableRoot Title="Flights">
+                        <TableSection Title="Airlines">
+                            <ImageCell Text="Aeroflot"
+                                       ImageSource="aeroflot.png"
+                                       Detail="Moscow"/>
+                            <ImageCell Text="Nord Star" 
+                                       ImageSource="nordstar.png"
+                                       Detail="Novosibisk"/>
+                            <ImageCell Text="S7"
+                                       ImageSource="s7.png"
+                                       Detail="Irkutsk"/>
+                        </TableSection>
+                        <TableSection Title="Airports">
+                            <TextCell Text="Domodedovo" />
+                            <TextCell Text="Pulkovo" />
+                            <TextCell Text="Vnukovo" />
+                            <EntryCell Label="Title"
+                                       LabelColor="Magenta"
+                                       Placeholder="Input Title"
+                                       HorizontalTextAlignment="Start"
+                                       Completed="EntryCell_Completed"
+                                       />
+                            <SwitchCell Text="Activity"
+                                        On="True"
+                                        OnChanged="SwitchCell_OnChanged"
+                                        />
+                            <ViewCell>
+                                <Grid>
+                                    
+                                </Grid>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>
+
+            <!--<WebView Source="https://yandex.ru"
+                     WidthRequest="500"
+                     HeightRequest="500"/>-->
+            
+            
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
