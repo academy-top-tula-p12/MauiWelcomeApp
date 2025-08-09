@@ -8,13 +8,13 @@
         {
             InitializeComponent();
 
-            Label labelAll = new Label()
-            {
-                Text = "Hello All",
-                //TextColor = (Color)Resources["textRed"]
-            };
-            labelAll.SetDynamicResource(Label.TextColorProperty, "textRed");
-            stack.Children.Add(labelAll);
+            //Label labelAll = new Label()
+            //{
+            //    Text = "Hello All",
+            //    //TextColor = (Color)Resources["textRed"]
+            //};
+            //labelAll.SetDynamicResource(Label.TextColorProperty, "textRed");
+            //stackVertical.Children.Add(labelAll);
         }
 
         private void Button_Clicked(object sender, EventArgs e)

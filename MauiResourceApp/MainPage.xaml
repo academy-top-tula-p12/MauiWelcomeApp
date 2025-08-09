@@ -18,14 +18,12 @@
             <Setter Property="Color" Value="{StaticResource Key=textGreen}" />
         </Style>
 
-        <Style TargetType="Button" BasedOn="{StaticResource greenTheme}">
-            
-        </Style>
+        <StyleSheet Source="/Resources/Css/mystyles.css" />
     </ContentPage.Resources>
 
     <ScrollView>
         <VerticalStackLayout
-            x:Name="stack"
+            x:Name="stackVertical"
             Padding="{StaticResource Key=padding20}"
             Spacing="25">
             <Label Text="Hello world"
@@ -36,6 +34,47 @@
                     Clicked="Button_Clicked">
             </Button>
             <ActivityIndicator IsRunning="True" Style="{StaticResource greenTheme}" />
+
+            <Border>
+                <VerticalStackLayout>
+                    <Label Text="Header One" />
+                    <Label StyleId="label20" Text="Header Two" />
+                    <Label Text="Magenta Text" StyleClass="magenta-text" />
+                    <Label Text="Golden Text" StyleClass="golden-text" />
+                    <Button Text="Click Me" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border>
+                <Entry x:Name="entryText" Placeholder="Input text">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState x:Name="Focused">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="DarkGray" />
+                                        <Setter Property="TextColor" Value="White" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="LightGray" />
+                                        <Setter Property="TextColor" Value="Black" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                        <Setter Property="TextColor" Value="DarkRed" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                        
+                    </VisualStateManager.VisualStateGroups>
+                </Entry>
+            </Border>
+            
         </VerticalStackLayout>
     </ScrollView>
 

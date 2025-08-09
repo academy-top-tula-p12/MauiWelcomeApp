@@ -1,3 +1,40 @@
-{
+*{
+    margin: 0;
+}
 
+border{
+    padding: 20;
+}
+
+^border {
+    font-size: 30;
+}
+
+#label20 {
+    font-size: 20;
+    color: crimson;
+    text-decoration: underline;
+}
+
+.magenta-text{
+    color: magenta;
+    text-decoration: underline;
+}
+
+.golden-text{
+    color: goldenrod;
+}
+
+element1 element2{
+
+}
+
+element1>element2 {
+}
+
+element1,
+element2 {
+}
+
+element1 + element2 {
 }

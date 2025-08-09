@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTriggersApp.MainPage"
+             xmlns:local="clr-namespace:MauiTriggersApp">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="triggerFocused" TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger Property="IsFocused" Value="True" TargetType="Entry">
+                        <Setter Property="TextColor" Value="DarkRed" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            x:Name="stackLayout">
+
+            <Entry TextColor="Pink" 
+                   Text="Hello world"
+                   Style="{StaticResource triggerFocused}" />
+            
+            <Entry>
+                <Entry.Triggers>
+                    <EventTrigger Event="TextChanged">
+                        <local:EntryNumberValidation />
+                    </EventTrigger>
+                </Entry.Triggers>    
+            </Entry>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

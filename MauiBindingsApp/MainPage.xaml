@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBindingsApp.MainPage"
+             xmlns:local="clr-namespace:MauiBindingsApp">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            x:Name="stackLayout">
+
+            <!--<Label x:Name="labelHelloTwo"
+                   BindingContext="{x:Reference entryHelloTwo}"
+                   Text="{Binding Text}" />-->
+            <!--<Label x:Name="labelHelloTwo" 
+                   Text="{Binding Source={x:Reference entryHelloTwo}, Path=Text}"/>
+            <Entry x:Name="entryHelloTwo" />-->
+
+            <!--<local:TagLabel x:Name="tagLabel"
+                            BindingContext="{x:Reference entry}"
+                            Text="{Binding Text}"
+                            Tag="{Binding Text}"/>
+            <Entry x:Name="entry" />
+            <Label x:Name="targetLabel"
+                   BindingContext="{x:Reference tagLabel}"
+                   Text="{Binding Tag}"
+                   />-->
+
+            <!--<Entry x:Name="entrySource" />
+            <Entry x:Name="entryTarget"
+                   BindingContext="{x:Reference entrySource}"
+                   Text="{Binding Path=Text, Mode=OneWayToSource}"/>-->
+
+            <Label x:Name="labelName" Text="{Binding Name}" />
+            <Label x:Name="labelAge" Text="{Binding Age}" />
+            <Entry x:Name="entryName" Text="{Binding Path=Name, Mode=TwoWay}" />
+            <Entry x:Name="entryAge" Text="{Binding Path=Age, Mode=TwoWay}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
