@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiBindingsApp", "MauiBind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiTriggersApp", "MauiTriggersApp\MauiTriggersApp.csproj", "{0A7F5015-3320-486D-ABEA-F574019A4E32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiListViewApp", "MauiListViewApp\MauiListViewApp.csproj", "{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,11 @@ Global
 		{0A7F5015-3320-486D-ABEA-F574019A4E32}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{0A7F5015-3320-486D-ABEA-F574019A4E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A7F5015-3320-486D-ABEA-F574019A4E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

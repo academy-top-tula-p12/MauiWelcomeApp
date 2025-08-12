@@ -40,6 +40,22 @@
             //entryNumber.Triggers.Add(triggerValidation);
 
             //stackLayout.Children.Add(entryNumber);
+
+            //DataTrigger dataTrigger = new DataTrigger(typeof(Button));
+            //dataTrigger.Binding = new Binding()
+            //{
+            //    Source = entryData,
+            //    Path = "Text.Length",
+            //};
+            //dataTrigger.Value = 0;
+
+            //dataTrigger.Setters.Add(new Setter()
+            //{
+            //    Property = Button.IsEnabledProperty,
+            //    Value = false
+            //});
+
+            //buttonDataSave.Triggers.Add(dataTrigger);
         }
     }
 }

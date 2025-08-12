@@ -14,6 +14,9 @@
                 </Style.Triggers>
             </Style>
         </ResourceDictionary>
+
+        <local:Employee x:Key="bobby" Name="Bobby" />
+
     </ContentPage.Resources>
 
     <ScrollView>
@@ -33,6 +36,66 @@
                     </EventTrigger>
                 </Entry.Triggers>    
             </Entry>
+
+            <Entry x:Name="entryData" Text="" />
+            <Button x:Name="buttonDataSave"
+                    Text="Save Data">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{ Binding Source={x:Reference entryData},
+                                                    Path=Text.Length}"
+                                 Value="0">
+                        <DataTrigger.Setters>
+                            <Setter Property="IsEnabled" Value="False" />
+                        </DataTrigger.Setters>
+                        
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Label Text="{Binding Source={x:StaticResource bobby},
+                                  Path=Name,
+                                  Mode=TwoWay}" TextColor="Magenta">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                                 Binding="{Binding Source={StaticResource bobby},
+                                                    Path=Name}"
+                                 Value="Admin">
+                        
+                        <Setter Property="TextColor" Value="YellowGreen" />
+                    </DataTrigger>
+                </Label.Triggers>    
+            </Label>
+
+            <Entry Text="{Binding Source={ x:StaticResource bobby},
+                                  Path=Name,
+                                  Mode=TwoWay }"/>
+
+
+            <Border Padding="10" StrokeThickness="3" Stroke="DarkGray">
+                <VerticalStackLayout>
+                    <Entry x:Name="email" Text="" />
+                    <Entry x:Name="phone" Text="" />
+                    <Button Text="Login">
+                        <Button.Triggers>
+                            <MultiTrigger TargetType="Button">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding Source={x:Reference email},
+                                                                        Path=Text.Length}"
+                                                      Value="0"/>
+                                    <BindingCondition Binding="{Binding Source={x:Reference phone},
+                                                                        Path=Text.Length}"
+                                                      Value="0"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </MultiTrigger>
+                        </Button.Triggers>
+                    </Button>
+                </VerticalStackLayout>
+                
+            </Border>
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 
