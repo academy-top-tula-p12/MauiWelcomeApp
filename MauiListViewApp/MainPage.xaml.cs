@@ -1,4 +1,6 @@
-﻿namespace MauiListViewApp
+﻿using System.Collections.ObjectModel;
+
+namespace MauiListViewApp
 {
     public partial class MainPage : ContentPage
     {
@@ -7,7 +9,8 @@
             "Moscow", "St Petersburg", "Novosibirsk"
         };
 
-        public List<Airline> Airlines { set; get; } = new List<Airline>()
+        public ObservableCollection<AirlineGrouping<String, Airline>> AirlinesGroups { set; get; }
+        public ObservableCollection<Airline> Airlines { set; get; } = new()
         {
             new()
             { 
@@ -42,14 +45,32 @@
         {
             InitializeComponent();
             //listViewCities.ItemsSource = cities;
-            BindingContext = this;
+            
 
-            listViewAirlines.ItemsSource = Airlines;
+            var airlinesGroups = Airlines.GroupBy(a => a.City)
+                                         .Select(ag => new AirlineGrouping<string, Airline>(ag.Key, ag));
+
+            AirlinesGroups = new(airlinesGroups);
+            //listViewAirlines.ItemsSource = AirlinesGroups;
+            //listViewAirlines.ItemsSource = Airlines;
+
+            BindingContext = this;
         }
 
         private void listViewCities_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             //labelSelectedCity.Text = $"Selected City: {e.SelectedItem.ToString()}";
+        }
+
+        private void buttonAddAirline_Clicked(object sender, EventArgs e)
+        {
+            Airlines.Add(new Airline()
+            {
+                Title = "S7",
+                City = "Irkutsk",
+                Logo = "logo_s7_01.png",
+                Plains = 550,
+            });
         }
     }
 }

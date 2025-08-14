@@ -28,40 +28,60 @@
                                   Path=SelectedItem.Title,
                                   StringFormat='Selected Airline: {0}'}"
                    />
+        <Button x:Name="buttonAddAirline"
+                Text="Add Airline"
+                Clicked="buttonAddAirline_Clicked"
+            />
         <ScrollView HeightRequest="400">
-            <ListView x:Name="listViewAirlines">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <!--<ViewCell>
-                            <ViewCell.View>
-                                <HorizontalStackLayout Padding="20">
-                                    <Image Source="{Binding Logo}"
-                                           HeightRequest="150"
-                                           Margin="20, 0"/>
-                                    <VerticalStackLayout>
-                                        <Label Text="{Binding Title}"
-                                               FontSize="30"
-                                               FontAttributes="Bold"/>
-                                        <Label Text="{Binding City}"
-                                               FontSize="26"
-                                               Margin="0, 0, 0, 20"/>
-                                        <Label Text="{Binding Plains}"
-                                               FontSize="20"/>
-                                    </VerticalStackLayout>
-                                </HorizontalStackLayout>
-                            </ViewCell.View>
-                        </ViewCell>-->
+            <VerticalStackLayout>
+                <ListView x:Name="listViewAirlines"
+                          Footer="August 2025"
+                          ItemsSource="{Binding AirlinesGroups}"
+                          GroupDisplayBinding="{Binding City}"
+                          IsGroupingEnabled="True"
+                          CachingStrategy="RecycleElement">
+                    <ListView.Header>
+                        <Label Text="Airline List"
+                               FontSize="30"/>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<ViewCell>
+                                <ViewCell.View>
+                                    <HorizontalStackLayout Padding="20">
+                                        <Image Source="{Binding Logo}"
+                                                HeightRequest="150"
+                                                Margin="20, 0"/>
+                                        <VerticalStackLayout>
+                                            <Label Text="{Binding Title}"
+                                                    FontSize="30"
+                                                    FontAttributes="Bold"/>
+                                            <Label Text="{Binding City}"
+                                                    FontSize="26"
+                                                    Margin="0, 0, 0, 20"/>
+                                            <Label Text="{Binding Plains}"
+                                                    FontSize="20"/>
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                </ViewCell.View>
+                            </ViewCell>-->
 
-                        <!--<ImageCell ImageSource="{Binding Logo}"
-                                   Text="{Binding Title}"
-                                   Detail="{Binding City}"/>-->
+                            <!--<ImageCell ImageSource="{Binding Logo}"
+                               Text="{Binding Title}"
+                               Detail="{Binding City}"/>-->
 
-                        <local:AirlineCell
-                            Title="{Binding Title}"
-                            ImageSource="{Binding Logo}"/>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                            <!--<local:AirlineCell
+                                Title="{Binding Title}"
+                                ImageSource="{Binding Logo}"/>-->
+                            <ViewCell>
+                                <Label Text="{Binding Title}" />
+                            </ViewCell>
+                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+            
         </ScrollView>
 
 

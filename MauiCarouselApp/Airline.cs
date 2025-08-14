@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiListViewApp
+namespace MauiCarouselApp
 {
     public class Airline
     {
@@ -13,17 +13,5 @@ namespace MauiListViewApp
         public string? City { get; set; }
         public string? Logo { get; set; }
         public int? Plains { get; set; }
-    }
-
-    // T1 - type of key
-    // T2 - type of item
-    public class AirlineGrouping<T1, T2> : ObservableCollection<T2>
-    {
-        public T1 City { get; private set; }
-
-        public AirlineGrouping(T1 city, IEnumerable<T2> items) : base(items)
-        {
-            City = city;
-        }
     }
 }

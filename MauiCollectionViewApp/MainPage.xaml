@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCollectionViewApp.MainPage"
+             WidthRequest="800"
+             HeightRequest="600">
+    
+    <ScrollView HeightRequest="500" VerticalOptions="Start">
+        <VerticalStackLayout Margin="20">
+            <Border Stroke="DarkGray" Padding="20" Margin="0, 20">
+                <CollectionView x:Name="collectionViewCities">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding}"
+               FontSize="28"
+               TextColor="DarkRed"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Border>
+
+            <Border Stroke="DarkGray" Padding="20" Margin="0, 20">
+                <ScrollView HeightRequest="300">
+                    <CollectionView x:Name="collectionViewAirlines"
+                            ItemsSource="{Binding Airlines}"
+                            ItemsLayout="VerticalList">
+                        <CollectionView.Header>
+                            <Label Text="Airlines List"
+                           FontSize="28"
+                           TextColor="DarkBlue"
+                           HorizontalTextAlignment="Center"/>
+                        </CollectionView.Header>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <HorizontalStackLayout Padding="20">
+                                    <Image Source="{Binding Logo}"
+                                HeightRequest="150"
+                                Margin="20, 0"
+                                VerticalOptions="Start"/>
+                                    <VerticalStackLayout>
+                                        <Label Text="{Binding Title}"
+                                    FontSize="30"
+                                    FontAttributes="Bold"/>
+                                        <Label Text="{Binding City}"
+                                    FontSize="26"
+                                    Margin="0, 0, 0, 20"/>
+                                        <Label Text="{Binding Plains}"
+                                    FontSize="20"/>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+
+            </Border>
+
+            <Border Stroke="DarkGray" Padding="20" Margin="0, 20">
+                <CollectionView ItemsSource="{Binding Cities}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding}" FontSize="28" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+
+</ContentPage>

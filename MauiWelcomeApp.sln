@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiTriggersApp", "MauiTrig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiListViewApp", "MauiListViewApp\MauiListViewApp.csproj", "{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCarouselApp", "MauiCarouselApp\MauiCarouselApp.csproj", "{8C44BF2E-4FBA-482A-A996-8EDD5C167E95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCollectionViewApp", "MauiCollectionViewApp\MauiCollectionViewApp.csproj", "{D56DAB5A-6993-418C-AC79-11DCD489FEC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,16 @@ Global
 		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2976FA9A-6A5E-4E9C-B6E0-894E6732553C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C44BF2E-4FBA-482A-A996-8EDD5C167E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C44BF2E-4FBA-482A-A996-8EDD5C167E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C44BF2E-4FBA-482A-A996-8EDD5C167E95}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8C44BF2E-4FBA-482A-A996-8EDD5C167E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C44BF2E-4FBA-482A-A996-8EDD5C167E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D56DAB5A-6993-418C-AC79-11DCD489FEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D56DAB5A-6993-418C-AC79-11DCD489FEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D56DAB5A-6993-418C-AC79-11DCD489FEC7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D56DAB5A-6993-418C-AC79-11DCD489FEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D56DAB5A-6993-418C-AC79-11DCD489FEC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
