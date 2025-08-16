@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiMVVMApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="10">
+
+            <Border Padding="20" StrokeThickness="2" Stroke="DarkBlue">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Title" />
+                        <Entry Text="{Binding Title, Mode=TwoWay}"
+                               WidthRequest="400"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="City" />
+                        <Entry Text="{Binding City, Mode=TwoWay}"
+                               WidthRequest="400"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Plains Count" />
+                        <Entry Text="{Binding PlainsCount, Mode=TwoWay}"
+                               WidthRequest="400"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Button x:Name="buttonAddAirline"
+                                Text="{Binding ButtonAddText}"
+                                Command="{Binding AddAirlineCommand}" />
+                    </HorizontalStackLayout>
+                    
+                </VerticalStackLayout>
+            </Border>
+
+            <ListView x:Name="listViewAirlines"
+                      ItemsSource="{Binding Airlines}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Margin="20">
+                                <Label Text="Title" FontAttributes="Bold" />
+                                <Label Text="{Binding Title}" />
+                                <Label Text="City" FontAttributes="Bold" />
+                                <Label Text="{Binding City}" />
+                                <Label Text="Plains Count" FontAttributes="Bold" />
+                                <Label Text="{Binding PlainsCount}" />
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button Text="Remove Airline"
+                        BackgroundColor="Magenta"
+                        Command="{Binding RemoveAirlineCommand}"
+                        CommandParameter="{Binding Source={x:Reference Name=listViewAirlines},
+                                                   Path=SelectedItem}"/>
+                <Button Text="Edit Airline"
+                        Command="{Binding EditAirlineCommand}"
+                        CommandParameter="{Binding Source={x:Reference Name=listViewAirlines},
+                                                   Path=SelectedItem}" />
+            </HorizontalStackLayout>
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
